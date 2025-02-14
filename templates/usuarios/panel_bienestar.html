@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Panel de Bienestar</h2>
+<p>Bienvenido, {{ user.username }}.</p>
+<h3>Lista de Aprendices</h3>
+<ul>
+    {% for aprendiz in aprendices %}
+    <li>{{ aprendiz.username }} - Horas: {{ aprendiz.horas_acumuladas }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
